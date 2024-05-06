@@ -64,8 +64,7 @@ router.get('/page/place/plan' , (req,res)=>{
 router.get('/page/:name/plan', (req, res) => {
     const { name } = req.params;
     const product = state.find((product) => product.name === name);
-    const statesimg = product.img;
-    res.render('product/planner');
+    res.render('product/planner' , {names: name});
 })
 
 module.exports = router;

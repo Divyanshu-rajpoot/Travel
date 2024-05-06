@@ -22,27 +22,24 @@
                 <h4>Things TO See & DO</h4>
                 <br><br>
                 <div id="destination">
-                    
+                        
+                    <% for (var i=0; i< places.length ;i++){ %>
+                        
                         <div id="carding">
                             <div id="left">
-                                <img src="https://images.unsplash.com/photo-1529588549443-d40e806f583e?q=80&w=1915&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                <img src="<%= places[i].img %>"
                                     alt="">
                             </div>
                             <div id="right">
-                                <h5>City Palace</h5>
-                                <p>City Palace, Jaipur, which includes the Chandra Mahal and Mubarak Mahal palaces and
-                                    other
-                                    buildings, is a palace complex in Jaipur, the capital of the Rajasthan state, India.
-                                    It
-                                    was the seat of the Maharaja of Jaipur, the head of the Kachwaha Rajput clan.</p>
+                                <h5><%= places[i].name%></h5>
+                                <p><%= places[i].des%></p>
                             </div>
                             <div id="bt">
                                 <button id="nearest-hotel">Plan Trip</button>
-                            
                             </div>
 
                         </div>
-                        
+                        <% } %>
 
                 </div>
             </div>

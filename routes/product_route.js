@@ -46,7 +46,8 @@ router.get('/', (req, res) => {
 router.get('/page/:name', (req, res) => {
     const { name } = req.params;
     const product = state.find((product) => product.name === name);
-    res.render('product/state', { states: product });
+    const place = product.place;
+    res.render('product/state', { states: product , places: place });
 })
 
 router.get('/trip/:days/:place', async (req, res) => {

@@ -10,7 +10,11 @@
         <a href="https://github.com/Divyanshu-rajpoot/travel">Contact Us</a>
     </div>
     <div id="interface">
-        <a href="/login">Login</a>
-        <a href="/logout">Logout</a>
+        <%if(!currentUser){%>
+            <a href="/login">Login</a>
+        <%}else{%>
+            <a href="#">Hello <%= currentUser.username %></a>
+            <a href="/logout">Logout</a>
+        <%}%>
     </div>
 </div>

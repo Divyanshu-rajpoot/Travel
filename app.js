@@ -16,14 +16,14 @@ const  User=require('./Models/User');
 
 dotenv.config();
 
-//mongodb+srv://divyanshur0603:divyanshu@cluster0.urrt5xq.mongodb.net/Tourist-database
-// mongoose.connect('mongodb://localhost:27017/Tourist-database')
-//     .then(()=>{
-//         console.log('db connected successfully');
-//     })
-//     .catch((err)=>{
-//         console.log('something went wrong')
-//     })
+
+mongoose.connect('mongodb+srv://divyanshur0603:divyanshu@cluster0.urrt5xq.mongodb.net/Tourist-database')
+    .then(()=>{
+        console.log('db connected successfully');
+    })
+    .catch((err)=>{
+        console.log('something went wrong')
+    })
     
 app.use(express.urlencoded({extended:true}, { strict: false }));
 app.use(methodOverride('_method'))
@@ -56,7 +56,10 @@ app.use((req, res, next) => {
 })
 app.use(product_route);
 app.use(auth_route);
-
+app.use((req, res, next) => {
+    res.locals.currentUser = req.user;
+    next();
+})
 
 // seed();
 app.listen(5000,()=>{

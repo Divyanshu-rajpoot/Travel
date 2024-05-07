@@ -1,23 +1,11 @@
-/* body {
-    font-family: Arial, sans-serif;
-    background-image: url('https://media.istockphoto.com/id/1708390940/photo/woman-standing-on-the-background-of-lake-in-austria-during-hike.webp?b=1&s=170667a&w=0&k=20&c=YGVM1PhQzc6cAVcwWhCEzkIuw6y6s6sdCbKEsOzKUlQ=');
-    background-color: #7fc5eb;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-} */
+
 
 .login-container {
     margin:70px auto;
     background-color: #62a4c5;
     padding: 20px;
     border-radius: 8px;
-    border: 2px solid #0aa6f4;
+    border: 2px solid #6d8d9e;
     height: 400px;
     width: 350px;
     box-shadow:#6d8d9e

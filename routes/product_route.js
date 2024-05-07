@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const state = require('../seed');
 const googleai = require('@google/generative-ai');
-const genAI = new googleai.GoogleGenerativeAI('AIzaSyCLKP8FDYVzUvIkh-S_5SxlDgyy7DZcecU');
+const genAI = new googleai.GoogleGenerativeAI('');
 let storedData;
 async function run(place, days) {
     const model = genAI.getGenerativeModel({ model: "gemini-pro" })
@@ -59,7 +59,7 @@ router.get('/trip/:days/:place', async (req, res) => {
     // res.render('product/trip' , {days: days , placeval: place , plannerimage: statesimg });
 });
 router.get('/page/place/plan' , (req,res)=>{
-    res.render('product/planner');
+    res.render('product/planner' , {names: ''});
 });
 router.get('/page/:name/plan', (req, res) => {
     const { name } = req.params;

@@ -25,6 +25,7 @@ html,body{
     object-position: top;
     position: absolute;
     transition: all ease 0.5s;
+    border-radius: 17px;
 }
 #page1 h1{
     color: #fff;
@@ -99,4 +100,9 @@ html,body{
 #card:hover{
     scale: 1.2;
     transition: all ease 0.5s;
+}
+#page3{
+    height: 100vh;
+    width: 100%;
+    background-color: #000;
 }

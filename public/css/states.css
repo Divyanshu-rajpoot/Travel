@@ -28,6 +28,7 @@ html,body{
     object-fit: cover;
     opacity: 0.65;
     z-index: -99;
+    
 }
 #det{
     height: 50vh;
@@ -128,6 +129,10 @@ html,body{
     text-align: center;
 }
 #bt{
+    position: absolute;
+    top:60%;
+    left: 80%;
+    right: 0;
     display: flex;
     align-items: center;
     justify-content: flex-start;

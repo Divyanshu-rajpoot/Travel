@@ -16,12 +16,13 @@ const  User=require('./Models/User');
 
 dotenv.config();
 
-
-mongoose.connect('mongodb+srv://divyanshur0603:divyanshu@cluster0.urrt5xq.mongodb.net/Tourist-database')
+//mongodb+srv://divyanshur0603:divy@cluster0.urrt5xq.mongodb.net/Tourist-database
+mongoose.connect('mongodb://127.0.0.1:27017/Tourist-database')
     .then(()=>{
         console.log('db connected successfully');
     })
     .catch((err)=>{
+        console.error(err);
         console.log('something went wrong')
     })
     
@@ -51,7 +52,6 @@ passport.deserializeUser(User.deserializeUser());
 passport.use(new LocalStrategy(User.authenticate()))
 app.use((req, res, next) => {
     res.locals.currentUser = req.user;
-    
     next();
 })
 app.use(product_route);
